@@ -1,1 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Georgia', serif;
+}
 
+body {
+  background-color: #c88c6c;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: url('chocolate-drip.png') no-repeat center top;
+  background-size: cover;
+  padding: 20px;
+}
+
+nav a {
+  margin: 0 10px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a.active {
+  color: #ffd700;
+}
+
+.profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 15px;
+}
+
+.menu-section {
+  text-align: center;
+  padding: 30px 50px;
+}
+
+.menu-section h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.delivery-pickup {
+  margin-bottom: 30px;
+}
+
+.delivery, .pickup {
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 10px;
+  border-radius: 20px;
+}
+
+.delivery {
+  background-color: #9d4c26;
+  color: white;
+}
+
+.pickup {
+  background-color: #f7a888;
+  color: white;
+}
+
+.menu-items {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: #a86b4d;
+  border-radius: 15px;
+  padding: 15px;
+  width: 250px;
+  text-align: center;
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.price-tag {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+  padding: 5px 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 5px;
+}
+
+.card h3 {
+  margin: 15px 0 10px;
+}
+
+.card p {
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+
+.card button {
+  background-color: #3a1e0f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  margin: 40px 0 20px;
+  font-size: 0.9em;
+}
