@@ -1,52 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popilicious</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Popilicious Logo" />
+        </div>
+        <nav>
+            <a href="#">HOME</a>
+            <a href="#">ABOUT US</a>
+            <a href="#">MENU</a>
+            <a href="#">CART</a>
+            <a href="#">CONTACT US</a>
+            <img src="profile.jpg" class="profile" alt="Profile" />
+        </nav>
+    </header>
 
-body {
-  margin: 0;
-  font-family: 'Quicksand', sans-serif;
-  background-color: #fffaf7;
-  color: #4e342e;
-}
-
-header {
-  background-color: #d7ccc8;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-header h1 {
-  font-size: 1.8rem;
-  color: #4e342e;
-}
-
-nav a {
-  margin-left: 1rem;
-  text-decoration: none;
-  color: #4e342e;
-  font-weight: 600;
-}
-
-nav a:hover {
-  color: #8d6e63;
-}
-
-.hero {
-  text-align: center;
-  padding: 4rem 2rem;
-  background-color: #efebe9;
-  color: #3e2723;
-}
-
-.hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #d7ccc8;
-  font-size: 0.9rem;
-  color: #4e342e;
-}
+    <main>
+        <div class="content">
+            <h3>Hi Syafiq!</h3>
+            <h1>POPILICIOUS</h1>
+            <p class="tagline">Crispy Outside, Sweet Inside!</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Search..." />
+                <button>Search</button>
+            </div>
+            <div class="footer">
+                <p>@crunchpopilicious</p>
+                <p>📍 MAHALIAH HALIMATUS SAADIAH</p>
+            </div>
+        </div>
+        <div class="images">
+            <img src="banana.png" class="banana" alt="Banana" />
+            <img src="oreo.png" class="oreo" alt="Oreo" />
+        </div>
+    </main>
+</body>
+</html>
