@@ -2,17 +2,98 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About Us - Popilicious</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      color: #5D4037; /* chocolate color */
+      background-color: #F5F1ED; /* nude */
+      text-align: center;
+      margin: 0;
+      padding: 0 20px;
+    }
+    header {
+      background: #fff;
+      padding: 20px 0;
+      border-bottom: 2px solid #D7CCC8;
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+    }
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #5D4037;
+      font-weight: 600;
+      font-size: 18px;
+    }
+    nav a:hover {
+      color: #3E2723;
+    }
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+    }
+    h2 {
+      font-weight: 700;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #D7CCC8;
+      padding-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 10px auto 0;
+    }
+    .team-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 20px;
+    }
+    .team-member {
+      text-align: center;
+      max-width: 150px;
+    }
+    .team-member img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #6D4C41;
+    }
+    .team-title {
+      font-weight: 700;
+      color: #4E342E;
+      margin-top: 12px;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+    .team-name {
+      margin-top: 4px;
+      font-weight: 600;
+      font-size: 16px;
+      color: #5D4037;
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>Popilicious</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
+      <a href="about.html" style="font-weight:bold;">About Us</a>
       <a href="menu.html">Menu</a>
       <a href="cart.html">Cart</a>
       <a href="profile.html">Profile</a>
@@ -21,45 +102,69 @@
   </header>
 
   <main>
-    <section class="section">
+    <section>
       <h2>Our Story</h2>
-      <p>Popilicious serves up popis—crispy golden rolls of popiah skin filled with sweet, ripe banana, lovingly fried to perfection. Each roll is a bite of warmth and crunch, with optional toppings like chocolate drizzle, condensed milk, or even crushed peanuts for that extra wow!</p>
+      <p>
+        Popilicious is a thriving snack business owned by SR Nur Aleya Farisha, a dedicated student from Mahallah Halimatus Saadiah, operating within the IIUM Gombak campus. Specializing in delicious and affordable popia-based treats, Popilicious has become a popular name among students and event-goers for over a year now. Although the business does not have a permanent stall, it remains highly active by participating in various events and festivals around campus, such as ICC events, KAED Fest, and other student-organized programs. This mobile business model allows Popilicious to reach a wider audience and maintain flexibility, making it a go-to snack option whenever there's a happening on campus. Nur Aleya Farisha’s entrepreneurial spirit and consistency in delivering quality snacks have helped establish Popilicious as a beloved brand among the IIUM student community.
+      </p>
+      <p>
+        Popilicious is a small-scale food business inspired by Islamic values and initiated by SR Nur Aleya Farisha from Mahallah Halimatus Saadiah, International Islamic University Malaysia (IIUM). At its core, Popilicious is not merely a commercial venture but represents a conscious effort to engage in ethical, halal entrepreneurship. Islam encourages the pursuit of lawful sustenance, as stated in the Qur’an: “Eat of what is lawful and good that Allah has provided for you, and be grateful for the favor of Allah, if it is [indeed] Him that you worship” (Surah An-Nahl, 16:114). By using halal ingredients and maintaining cleanliness, quality, and integrity in the preparation and sale of its signature snack which banana wrapped in popiah skin and fried to perfection.
+      </p>
+      <p>
+        Furthermore, the initiative is built upon the Islamic values of amanah (trustworthiness), ihsan (excellence in service), and barakah (divine blessing). The Prophet Muhammad ﷺ said: “The truthful and trustworthy merchant will be with the Prophets, the truthful, and the martyrs” (Tirmidhi, Hadith 1209). Popilicious aims to conduct its operations with sincerity and professionalism, recognizing that ethical business is an extension of faith. In addition to economic benefit, this initiative promotes ta’awun—mutual assistance within the community—as encouraged in the Qur’an: “And cooperate in righteousness and piety…” (Surah Al-Ma’idah, 5:2). By supporting Popilicious, members of the IIUM community are directly contributing to the empowerment of young entrepreneurs and encouraging sustainable, values-based development.
+      </p>
+      <p>
+        In essence, Popilicious aspires to be more than a food outlet. It seeks to uphold a model of Islamic entrepreneurship that aligns with the university’s mission of integrating knowledge and faith. With sincere intention (niat), business itself can become a form of worship and a means of ongoing reward (sadaqah jariyah) when it contributes to personal growth, community welfare, and the betterment of society. Popilicious stands as a testament to how simple initiatives, when guided by Islamic principles, can become impactful and meaningful.
+      </p>
     </section>
 
-    <section class="section">
+    <section>
       <h2>Our Values</h2>
-      <p>At Popilicious, we value quality, creativity, teamwork, and joy. We believe in making every bite a memorable experience while supporting each other with a shared passion for excellence and innovation.</p>
+      <p>
+        At Popilicious, we believe in honesty, quality, and community spirit. We are committed to providing halal, delicious snacks with integrity and care. Our values are rooted in:
+      </p>
+      <ul style="max-width: 700px; margin: 10px auto 0; text-align: left; font-size: 16px; color:#5D4037;">
+        <li><strong>Amanah (Trustworthiness):</strong> We ensure that all our ingredients and processes are halal and meet the highest standards.</li>
+        <li><strong>Ihsan (Excellence):</strong> We strive for excellence in taste, presentation, and customer service.</li>
+        <li><strong>Barakah (Blessing):</strong> We aim to bring blessing and positivity through our business, benefiting customers and the community.</li>
+        <li><strong>Ta’awun (Cooperation):</strong> We foster teamwork and community support to grow together sustainably.</li>
+        <li><strong>Customer Satisfaction:</strong> Our customers are our priority, and we listen to their feedback to continuously improve.</li>
+      </ul>
     </section>
 
-    <section class="section">
+    <section>
       <h2>Meet the Team</h2>
-      <div class="team-photos">
-        <div class="member fade-in">
-          <img src="images/nur_aleya_farisha.jpg" alt="Nur Aleya Farisha">
-          <h4>Founder</h4>
-          <p>Nur Aleya Farisha</p>
+
+      <div class="team-member" style="margin-bottom: 40px;">
+        <img src="images/nur_aleya_farisha.jpg" alt="Nur Aleya Farisha - Founder" />
+        <div class="team-title">Founder</div>
+        <div class="team-name">Nur Aleya Farisha</div>
+      </div>
+
+      <div class="team-row" style="margin-bottom: 40px;">
+        <div class="team-member">
+          <img src="images/nor_nadhira.jpg" alt="Nor Nadhira - Web Developer" />
+          <div class="team-title">Web Developer</div>
+          <div class="team-name">Nor Nadhira</div>
         </div>
-        <div class="member fade-in">
-          <img src="images/nor_nadhira.jpg" alt="Nor Nadhira">
-          <h4>Web Developer</h4>
-          <p>Nor Nadhira</p>
+        <div class="team-member">
+          <img src="images/nur_alya_nabilah.jpg" alt="Nur Alya Nabilah - Web Developer" />
+          <div class="team-title">Web Developer</div>
+          <div class="team-name">Nur Alya Nabilah</div>
         </div>
-        <div class="member fade-in">
-          <img src="images/nur_alya_nabilah.jpg" alt="Nur Alya Nabilah">
-          <h4>Web Developer</h4>
-          <p>Nur Alya Nabilah</p>
-        </div>
-        <div class="member fade-in">
-          <img src="images/irdina_aqilah.jpg" alt="Irdina Aqilah">
-          <h4>Web Developer</h4>
-          <p>Irdina Aqilah</p>
-        </div>
-        <div class="member fade-in">
-          <img src="images/mrc_team.jpg" alt="MRC Mahallah Halimatus Saadiah">
-          <h4>Cooking Team</h4>
-          <p>MRC Mahallah Halimatus Saadiah</p>
+        <div class="team-member">
+          <img src="images/irdina_aqilah.jpg" alt="Irdina Aqilah - Web Developer" />
+          <div class="team-title">Web Developer</div>
+          <div class="team-name">Irdina Aqilah</div>
         </div>
       </div>
+
+      <div class="team-member" style="margin: 0 auto;">
+        <img src="images/mrc_team.jpg" alt="Cooking Team - MRC Mahallah Halimatus Saadiah" style="width: 180px; height: 120px; border-radius: 12px; object-fit: cover; border: 3px solid #6D4C41;" />
+        <div class="team-title">Cooking Team</div>
+        <div class="team-name">MRC Mahallah Halimatus Saadiah (12 people)</div>
+      </div>
+
     </section>
   </main>
 
