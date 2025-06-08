@@ -6,7 +6,7 @@ Welcome to Popilicious — a delicious business website made with love and choco
 
 To get started:
 
-git clone https://github.com/your-username/popilicious.git
+git clone https://github.com/nuttylah/popilicious.git
 cd popilicious
 
 index.html       → Homepage  
