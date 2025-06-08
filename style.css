@@ -104,3 +104,58 @@ footer {
 .menu-item button:hover {
   background-color: #5c2e00;
 }
+
+.section {
+  text-align: center;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  max-width: 900px;
+}
+
+.team-photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.member {
+  max-width: 180px;
+  animation: fadeIn 1s ease-in;
+}
+
+.member img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.member h4 {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1.1rem;
+  color: #7b3f00;
+}
+
+.member p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .team-photos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .member {
+    width: 80%;
+  }
+}
