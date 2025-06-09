@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Menu - Popilicious</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="menu.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet" />
 </head>
 <body>
   <header>
@@ -13,7 +14,7 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="menu.html">Menu</a>
+      <a href="menu.html" class="active">Menu</a>
       <a href="cart.html">Cart</a>
       <a href="profile.html">Profile</a>
       <a href="contact.html">Contact</a>
@@ -21,37 +22,36 @@
   </header>
 
   <main>
-    <section class="menu">
-      <h2>Our Menu</h2>
+    <section class="menu-intro">
+      <h2>Our Delicious Popis</h2>
+      <p>Each Popilicious popi is handmade with love and served hot and crispy with your favorite toppings!</p>
+    </section>
 
-      <div class="menu-category">
-        <h3>Popis Specials</h3>
-        <div class="menu-item">
-          <img src="images/popis_oreo.jpg" alt="Popis Oreo">
-          <h4>POPIS OREO</h4>
-          <p>Banana covered with spring rolls, drizzled with Beryl's chocolate and Oreo.</p>
-          <button>Add to Cart</button>
-        </div>
-        <div class="menu-item">
-          <img src="images/popis_nestum.jpg" alt="Popis Nestum">
-          <h4>POPIS NESTUM</h4>
-          <p>Banana covered with spring rolls, drizzled with Beryl's chocolate and white chocolate + Nestum.</p>
-          <button>Add to Cart</button>
-        </div>
-        <div class="menu-item">
-          <img src="images/popis_cornflakes.jpg" alt="Popis Cornflakes">
-          <h4>POPIS CORNFLAKES</h4>
-          <p>Banana covered with spring rolls, drizzled with Beryl's chocolate and white chocolate + Cornflakes.</p>
-          <button>Add to Cart</button>
-        </div>
-        <div class="menu-item">
-          <img src="images/popis_combo_happy.jpg" alt="Popis Combo Happy">
-          <h4>POPIS COMBO HAPPY</h4>
-          <p>Combo of three flavors (Oreo, Nestum, and Cornflakes) drizzled with Beryl's chocolate and white chocolate.</p>
-          <button>Add to Cart</button>
-        </div>
+    <section class="menu-grid">
+      <div class="menu-item">
+        <img src="images/choco_popi.jpg" alt="Choco Popi" />
+        <h3>Choco Popi</h3>
+        <p>Classic popiah filled with banana, topped with rich chocolate drizzle 🍫</p>
+        <span class="price">RM2.50</span>
       </div>
-
+      <div class="menu-item">
+        <img src="images/milk_popi.jpg" alt="Milk Popi" />
+        <h3>Milk Popi</h3>
+        <p>Sweet condensed milk poured generously over hot, crispy popi 🥛</p>
+        <span class="price">RM2.50</span>
+      </div>
+      <div class="menu-item">
+        <img src="images/peanut_popi.jpg" alt="Peanut Popi" />
+        <h3>Peanut Popi</h3>
+        <p>Crushed peanuts with chocolate + banana = perfect crunchy combo 🥜</p>
+        <span class="price">RM3.00</span>
+      </div>
+      <div class="menu-item">
+        <img src="images/mixbox.jpg" alt="Mixbox" />
+        <h3>Mixbox</h3>
+        <p>Get all 3 in 1 box – chocolate, milk, and peanut for ultimate satisfaction! ❤️</p>
+        <span class="price">RM7.00</span>
+      </div>
     </section>
   </main>
 
