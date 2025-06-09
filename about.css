@@ -252,3 +252,45 @@
   color: #555;
 }
 
+/* Logo container */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Logo image */
+.logo-img {
+  width: 40px;          /* Small and precise */
+  height: 40px;
+  border-radius: 50%;   /* Circle */
+  object-fit: cover;    /* Crop to fit frame */
+  border: 2px solid #ffb6c1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.1) rotate(5deg); /* Cute hover effect */
+}
+
+/* Brand name */
+.brand-name {
+  font-family: 'Pacifico', cursive;
+  font-size: 24px;
+  color: #ff69b4;
+}
+
+/* Optional animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
