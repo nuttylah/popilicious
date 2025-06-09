@@ -252,6 +252,10 @@
   color: #555;
 }
 
+header h1 {
+  font-size: 1.8rem;
+  color: #4e342e;
+}
 /* Logo container */
 .logo {
   display: flex;
@@ -267,7 +271,7 @@
   height: 40px;
   border-radius: 50%;   /* Circle */
   object-fit: cover;    /* Crop to fit frame */
-  border: 2px solid #ffb6c1;
+  border: 2px solid #5C3A21;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
 }
@@ -276,11 +280,27 @@
   transform: scale(1.1) rotate(5deg); /* Cute hover effect */
 }
 
+.btn {
+  background-color: #8e44ad;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #732d91;
+}
+
 /* Brand name */
 .brand-name {
   font-family: 'Pacifico', cursive;
   font-size: 24px;
-  color: #ff69b4;
+  color: #5C3A21;
 }
 
 /* Optional animation */
