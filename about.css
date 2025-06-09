@@ -199,3 +199,45 @@
     max-width: 90%;
   }
 }
+
+/* New Section: Food Gallery */
+.food-gallery {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fdf9f2;
+}
+
+.food-gallery h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #6b3e26;
+  font-family: 'Pacifico', cursive;
+}
+
+.food-gallery p {
+  font-size: 1em;
+  margin-bottom: 30px;
+  color: #444;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 0 10px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
