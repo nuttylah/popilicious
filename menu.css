@@ -44,6 +44,13 @@
   object-fit: cover;
   border-radius: 8px;
 }
+.modal img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
 
 .price {
   display: block;
