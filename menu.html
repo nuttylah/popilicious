@@ -25,32 +25,47 @@
     <section class="menu-intro">
       <h2>Our Delicious Popis</h2>
       <p>Each Popilicious popis is handmade with love and served hot and crispy with your favorite toppings!</p>
+
+      <div class="filter-buttons">
+        <button class="filter-btn active" onclick="filterItems('all')">All</button>
+        <button class="filter-btn" onclick="filterItems('choco')">Choco Oreo</button>
+        <button class="filter-btn" onclick="filterItems('milk')">Milk Nestum</button>
+        <button class="filter-btn" onclick="filterItems('cornflake')">Cornflake</button>
+        <button class="filter-btn" onclick="filterItems('mixbox')">Mixbox</button>
+      </div>
     </section>
 
     <section class="menu-grid">
-      <div class="menu-item">
-        <img src="images/choco_popi.jpg" alt="Choco Popi" />
+      <div class="menu-item choco" onclick="openModal('modal1')">
+        <img src="images/choco_popi.jpg" alt="Choco Popis" />
         <h3>Choco Oreo Popis</h3>
-        <p>Classic popiah filled with banana, topped with rich chocolate drizzle with crushed oreo🍫</p>
+        <p>Classic popiah filled with banana, topped with rich chocolate drizzle with crushed Oreo 🍫</p>
         <span class="price">RM2.50</span>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
-      <div class="menu-item">
-        <img src="images/milk_popi.jpg" alt="Milk Popi" />
+
+      <div class="menu-item milk" onclick="openModal('modal2')">
+        <img src="images/milk_popi.jpg" alt="Milk Popis" />
         <h3>Milk Nestum Popis</h3>
-        <p>Sweet condensed milk poured generously over hot, crispy popis with nestum 🥛</p>
+        <p>Sweet condensed milk poured generously over hot, crispy popis with Nestum 🥛</p>
         <span class="price">RM7.00</span>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
-      <div class="menu-item">
-        <img src="images/peanut_popi.jpg" alt="Peanut Popi" />
+
+      <div class="menu-item mixbox" onclick="openModal('modal4')">
+        <img src="images/mixbox.jpg" alt="Mixbox" />
+        <h3>Mixbox</h3>
+        <p>Get all 3 in 1 box – Oreo, Nestum, and Cornflake for ultimate satisfaction! ❤️</p>
+        <span class="price">RM10.00</span>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="menu-item cornflake" onclick="openModal('modal3')">
+        <img src="images/peanut_popi.jpg" alt="Cornflake Popis" />
         <h3>Cornflake Popis</h3>
         <p>Crushed cornflakes with chocolate + banana = perfect crunchy combo 🥜</p>
         <span class="price">RM7.00</span>
-      </div>
-      <div class="menu-item">
-        <img src="images/mixbox.jpg" alt="Mixbox" />
-        <h3>Mixbox</h3>
-        <p>Get all 3 in 1 box – Oreo, nestum, and cornflake for ultimate satisfaction! ❤️</p>
-        <span class="price">RM10.00</span>
+        <button class="add-to-cart">Add to Cart</button>
       </div>
     </section>
   </main>
@@ -58,5 +73,61 @@
   <footer>
     <p>&copy; 2025 Popilicious. All rights reserved.</p>
   </footer>
+
+  <!-- Modals -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal1')">&times;</span>
+      <h3>Choco Oreo Popis</h3>
+      <img src="images/choco_popi.jpg" alt="Choco" />
+      <p>Delicious banana popis coated with chocolate and crushed Oreo!</p>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal2')">&times;</span>
+      <h3>Milk Nestum Popis</h3>
+      <img src="images/milk_popi.jpg" alt="Milk" />
+      <p>Creamy, crunchy and so satisfying with every bite!</p>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal3')">&times;</span>
+      <h3>Cornflake Popis</h3>
+      <img src="images/peanut_popi.jpg" alt="Cornflake" />
+      <p>That crispy cornflake crunch mixed with chocolate? Yum!</p>
+    </div>
+  </div>
+
+  <div id="modal4" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal4')">&times;</span>
+      <h3>Mixbox</h3>
+      <img src="images/mixbox.jpg" alt="Mixbox" />
+      <p>Enjoy every flavor in one delightful box!</p>
+    </div>
+  </div>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = "block";
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+
+    function filterItems(category) {
+      const items = document.querySelectorAll(".menu-item");
+      const buttons = document.querySelectorAll(".filter-btn");
+      buttons.forEach(btn => btn.classList.remove("active"));
+      event.target.classList.add("active");
+      items.forEach(item => {
+        item.style.display = category === 'all' || item.classList.contains(category) ? 'block' : 'none';
+      });
+    }
+  </script>
 </body>
 </html>
