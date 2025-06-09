@@ -1,8 +1,18 @@
-body {
-  margin: 0;
-  font-family: 'Quicksand', sans-serif;
-  background-color: #fffaf7;
-  color: #4e342e;
+main {
+  background-color: rgba(255, 255, 255, 0.92);
+  padding: 40px 20px;
+  border-radius: 12px;
+  margin: 30px auto;
+  max-width: 1200px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+}
+main {
+  background-color: rgba(255, 255, 255, 0.92);
+  padding: 40px 20px;
+  border-radius: 12px;
+  margin: 30px auto;
+  max-width: 1200px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
 }
 
 header {
