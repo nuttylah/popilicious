@@ -53,19 +53,19 @@ header h1 {
 }
 
 .btn {
-  background-color: #d7ccc8;
+  background-color: #8e44ad;
   color: white;
   border: none;
   padding: 12px 24px;
   font-size: 1rem;
   border-radius: 8px;
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 15px;
   transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #d7ccc8;
+  background-color: #732d91;
 }
 
 /* Brand name */
