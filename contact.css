@@ -1,3 +1,32 @@
+/* === Logo === */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #5C3A21;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.brand-name {
+  font-family: 'Pacifico', cursive;
+  font-size: 24px;
+  color: #5C3A21;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f3f4f6;
