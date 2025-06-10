@@ -161,5 +161,17 @@
   <footer>
     <p>&copy; 2025 Popilicious. All rights reserved.</p>
   </footer>
+
+<script>
+  // Update cart badge count from localStorage
+  function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const count = cart.reduce((total, item) => total + item.quantity, 0);
+    document.getElementById('cart-count').textContent = count;
+  }
+
+  // Run on page load
+  updateCartCount();
+</script>
 </body>
 </html>
