@@ -152,6 +152,20 @@
       const newPrice = checkbox.checked ? basePrice + 1.00 : basePrice;
       priceElement.textContent = "RM" + newPrice.toFixed(2);
     }
+
+    function addToCart(name, price) {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const existingItem = cart.find(item => item.name === name);
+      
+      if (existingItem) {
+        existingItem.quantity += 1;
+      } else {
+        cart.push({ name, quantity: 1, price });
+      }
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+      window.location.href = 'cart.html'; // Redirect to Cart page
+    }
   </script>
 </body>
 </html>
