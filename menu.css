@@ -1,3 +1,50 @@
+/* === Base Styling === */
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #FFF8F2;
+  color: #4E342E;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Header === */
+header h1 {
+  font-size: 2rem;
+  color: #5C3A21;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* === Logo === */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #5C3A21;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.brand-name {
+  font-family: 'Pacifico', cursive;
+  font-size: 24px;
+  color: #5C3A21;
+}
+
+/* === Intro & Filters === */
 .menu-intro {
   text-align: center;
   padding: 30px 20px 10px;
@@ -12,30 +59,44 @@
   padding: 8px 16px;
   margin: 5px;
   border: none;
-  background-color: #f1c40f;
+  background-color: #E3A857;
+  color: #fff;
   cursor: pointer;
   border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: #C97D3D;
 }
 
 .filter-btn.active {
-  background-color: #d35400;
+  background-color: #5C3A21;
   color: #fff;
 }
 
+/* === Menu Grid === */
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 20px;
   padding: 20px;
 }
 
 .menu-item {
-  background: #fffbea;
-  border: 1px solid #f0d58c;
+  background: #FFF7EC;
+  border: 1px solid #EBD8B2;
   border-radius: 10px;
   padding: 15px;
   text-align: center;
   cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .menu-item img {
@@ -44,18 +105,13 @@
   object-fit: cover;
   border-radius: 8px;
 }
-.modal img {
-  max-width: 90%;
-  height: auto;
-  border-radius: 10px;
-  display: block;
-  margin: 0 auto;
-}
 
+/* === Price & Button === */
 .price {
   display: block;
   font-weight: bold;
   margin-top: 10px;
+  color: #4E342E;
 }
 
 .add-to-cart {
@@ -64,10 +120,17 @@
   background-color: #27ae60;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+.add-to-cart:hover {
+  background-color: #1e8449;
+}
+
+/* === Cheese Option === */
 .cheese-option {
   display: block;
   margin-top: 10px;
@@ -79,6 +142,7 @@
   margin-right: 5px;
 }
 
+/* === Modal === */
 .modal {
   display: none;
   position: fixed;
@@ -96,16 +160,26 @@
   background-color: white;
   margin: auto;
   padding: 20px;
-  width: 80%;
-  max-width: 500px;
+  width: 90%;
+  max-width: 480px;
   border-radius: 10px;
   text-align: center;
+  animation: fadeIn 0.5s ease;
 }
 
 .modal-content img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.modal img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
 }
 
 .close {
@@ -116,43 +190,18 @@
   cursor: pointer;
 }
 
+/* === Footer === */
 footer {
   text-align: center;
   padding: 20px;
-  background: #f1c40f;
+  background: #5C3A21;
   color: #fff;
+  font-size: 0.9rem;
 }
 
-header h1 {
-  font-size: 1.8rem;
-  color: #4e342e;
-}
-/* Logo container */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px;
-  animation: fadeIn 1s ease-in-out;
-}
-
-/* Logo image */
-.logo-img {
-  width: 40px;          /* Small and precise */
-  height: 40px;
-  border-radius: 50%;   /* Circle */
-  object-fit: cover;    /* Crop to fit frame */
-  border: 2px solid #5C3A21;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
-}
-
-.logo-img:hover {
-  transform: scale(1.1) rotate(5deg); /* Cute hover effect */
-}
-
+/* === Universal Buttons === */
 .btn {
-  background-color: #8e44ad;
+  background-color: #8E44AD;
   color: white;
   border: none;
   padding: 12px 24px;
@@ -167,14 +216,37 @@ header h1 {
   background-color: #732d91;
 }
 
-/* Brand name */
-.brand-name {
-  font-family: 'Pacifico', cursive;
-  font-size: 24px;
-  color: #5C3A21;
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .menu-intro {
+    padding: 20px 10px 10px;
+  }
+
+  .menu-grid {
+    padding: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .modal-content {
+    width: 95%;
+  }
+
+  .filter-btn {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .logo-img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .brand-name {
+    font-size: 20px;
+  }
 }
 
-/* Optional animation */
+/* === Animation === */
 @keyframes fadeIn {
   from {
     opacity: 0;
