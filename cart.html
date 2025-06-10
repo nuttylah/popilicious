@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cart – Popilicious</title>
+  <title>Cart - Popilicious</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="cart.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Pacifico&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header class="site-header">
+  
+  <header>
     <div class="logo">
       <img src="image/LOGO_POPIS.jpg" alt="Popilicious Logo" class="logo-img" />
       <span class="brand-name">Popilicious</span>
@@ -24,65 +25,93 @@
     </nav>
   </header>
 
+  
   <main>
     <section class="cart-summary">
       <h2>Your Cart</h2>
       <table>
         <thead>
-          <tr><th>Product</th><th>Qty</th><th>Price</th></tr>
+          <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
         </thead>
-        <tbody id="cart-items"></tbody>
+        <tbody id="cart-items">
+          <!-- Cart items will be dynamically inserted here -->
+        </tbody>
       </table>
 
       <div class="total-section">
-        <div><strong>Total:</strong> <span id="total-price">RM0.00</span></div>
+        <div class="total">
+          <span>Total:</span>
+          <span id="total-price">RM0.00</span>
+        </div>
+
         <div class="promo-code">
-          <label>Promo Code:</label>
-          <input type="text" id="promo" placeholder="DISCOUNT10" />
+          <label for="promo">Promo Code:</label>
+          <input type="text" id="promo" placeholder="Enter promo code" />
           <button onclick="applyPromo()">Apply</button>
         </div>
-        <div><strong>Grand Total:</strong> <span id="grand-total">RM0.00</span></div>
+
+        <div class="grand-total">
+          <span>Grand Total:</span>
+          <span id="grand-total">RM0.00</span>
+        </div>
+
         <button class="checkout-btn" onclick="checkout()">Checkout</button>
       </div>
     </section>
   </main>
 
-  <footer><p>&copy; 2025 Popilicious. All rights reserved.</p></footer>
+  
+  <footer>
+    <p>&copy; 2025 Popilicious. All rights reserved.</p>
+  </footer>
 
+  
   <script>
-    function updateCart() {
-      const cart = JSON.parse(localStorage.getItem('cart')) || [];
-      const tbody = document.getElementById('cart-items');
-      tbody.innerHTML = '';
-      let total = 0;
-      cart.forEach(item => {
-        const cost = item.quantity * item.price;
-        total += cost;
-        tbody.innerHTML += `
-          <tr>
-            <td>${item.name}</td>
-            <td>${item.quantity}</td>
-            <td>RM${cost.toFixed(2)}</td>
-          </tr>`;
-      });
-      document.getElementById('total-price').textContent = `RM${total.toFixed(2)}`;
-      document.getElementById('grand-total').textContent = `RM${total.toFixed(2)}`;
+  function updateCart() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartItems = document.getElementById('cart-items');
+    cartItems.innerHTML = '';
+    let total = 0;
+
+    cart.forEach(item => {
+      const itemTotal = item.quantity * item.price;
+      total += itemTotal;
+      cartItems.innerHTML += `
+        <tr>
+          <td>${item.name}</td>
+          <td>${item.quantity}</td>
+          <td>RM${itemTotal.toFixed(2)}</td>
+        </tr>
+      `;
+    });
+
+    document.getElementById('total-price').textContent = `RM${total.toFixed(2)}`;
+    document.getElementById('grand-total').textContent = `RM${total.toFixed(2)}`;
+  }
+
+  function applyPromo() {
+    const promoCode = document.getElementById('promo').value;
+    let discount = 0;
+
+    if (promoCode === "DISCOUNT10") {
+      discount = 0.10;
     }
 
-    function applyPromo() {
-      const code = document.getElementById('promo').value.trim();
-      let discount = (code === 'DISCOUNT10') ? 0.1 : 0;
-      const t = parseFloat(document.getElementById('total-price').textContent.replace('RM', ''));
-      const grand = t - t * discount;
-      document.getElementById('grand-total').textContent = `RM${grand.toFixed(2)}`;
-    }
+    const totalPrice = parseFloat(document.getElementById('total-price').textContent.replace('RM', ''));
+    const grandTotal = totalPrice - (totalPrice * discount);
+    document.getElementById('grand-total').textContent = `RM${grandTotal.toFixed(2)}`;
+  }
 
-    function checkout() {
-      alert('Proceeding to checkout…');
-      // integrate payment flow here
-    }
+  function checkout() {
+    alert("Proceeding to checkout...");
+    // Additional logic for actual checkout can go here
+  }
 
-    window.onload = updateCart;
-  </script>
+  window.onload = updateCart;
+</script>
 </body>
 </html>
