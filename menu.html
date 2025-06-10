@@ -3,168 +3,159 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Menu - Popilicious</title>
+  <title>Menu – Popilicious</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="menu.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    .cart-icon {
+      position: relative;
+      font-size: 1rem;
+      margin-left: 15px;
+      color: #4e342e;
+    }
+    .cart-icon::after {
+      content: attr(data-count);
+      position: absolute;
+      top: -8px;
+      right: -10px;
+      background: #a9745c;
+      color: #fff;
+      font-size: 12px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .notif-popup {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #fff0e5;
+      color: #4e342e;
+      border: 1px solid #a9745c;
+      padding: 16px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      max-width: 250px;
+      font-family: 'Quicksand', sans-serif;
+      z-index: 1000;
+    }
+
+    .notif-popup button {
+      margin-top: 10px;
+      margin-right: 5px;
+      padding: 6px 12px;
+      background: #a9745c;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .notif-popup button:hover {
+      background: #8e5d47;
+    }
+
+    .notif-popup a button {
+      background: #6f4e37;
+    }
+
+    .notif-popup a button:hover {
+      background: #593b2d;
+    }
+  </style>
 </head>
-<body>
- <header>
+<body onload="updateCartIcon()">
+  <header class="site-header">
     <div class="logo">
-  <img src="image/LOGO_POPIS.jpg" alt="Popilicious Logo" class="logo-img" />
-  <span class="brand-name">Popilicious</span>
-</div>
+      <img src="image/LOGO_POPIS.jpg" alt="Popilicious Logo" class="logo-img" />
+      <span class="brand-name">Popilicious</span>
+    </div>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="menu.html">Menu</a>
-      <a href="cart.html">Cart</a>
+      <a href="menu.html" class="active">Menu</a>
+      <a href="cart.html" class="cart-icon" id="cart-icon" data-count="0">🛒</a>
       <a href="profile.html">Profile</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <section class="menu-intro">
-      <h2>Our Delicious Popis</h2>
-      <p>Each Popilicious popis is handmade with love and served hot and crispy with your favorite toppings!</p>
-
-      <div class="filter-buttons">
-        <button class="filter-btn active" onclick="filterItems('all')">All</button>
-        <button class="filter-btn" onclick="filterItems('choco')">Choco Oreo</button>
-        <button class="filter-btn" onclick="filterItems('milk')">Milk Nestum</button>
-        <button class="filter-btn" onclick="filterItems('cornflake')">Cornflake</button>
-        <button class="filter-btn" onclick="filterItems('mixbox')">Mixbox</button>
-      </div>
-    </section>
-
-    <section class="menu-grid">
-      <div class="menu-item choco" onclick="openModal('modal1')">
-        <img src="image/OREO.jpg" alt="Oreo Popis" />
+  <main class="menu-page">
+    <h1 class="menu-title">Our Popis Menu</h1>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="image/choco_oreo.jpg" alt="Choco Oreo Popis" />
         <h3>Choco Oreo Popis</h3>
-        <p>Classic popiah filled with banana, topped with rich chocolate drizzle with crushed Oreo 🍫</p>
-        <span class="price">RM8.00</span>
-        <label class="cheese-option">
-          <input type="checkbox" onchange="toggleCheese(this)" data-price="8.00" /> Add Cheese (+RM1)
-        </label>
-        <button class="add-to-cart">Add to Cart</button>
+        <p>Rich chocolate base with crunchy Oreos.</p>
+        <p class="price">RM8.00</p>
+        <button onclick="addToCart('Choco Oreo Popis', 8.00)">Add to Cart</button>
       </div>
 
-      <div class="menu-item milk" onclick="openModal('modal2')">
-        <img src="image/NESTUM.jpg" alt="Milk Popis" />
+      <div class="menu-item">
+        <img src="image/milk_nestum.jpg" alt="Milk Nestum Popis" />
         <h3>Milk Nestum Popis</h3>
-        <p>Sweet condensed milk poured generously over hot, crispy popis with Nestum 🥛</p>
-        <span class="price">RM8.00</span>
-        <label class="cheese-option">
-          <input type="checkbox" onchange="toggleCheese(this)" data-price="8.00" /> Add Cheese (+RM1)
-        </label>
-        <button class="add-to-cart">Add to Cart</button>
+        <p>Sweet milky popis topped with nestum cereal.</p>
+        <p class="price">RM8.00</p>
+        <button onclick="addToCart('Milk Nestum Popis', 8.00)">Add to Cart</button>
       </div>
 
-      <div class="menu-item cornflake" onclick="openModal('modal3')">
-        <img src="image/CORNFLAKES.jpg" alt="Cornflake Popis" />
+      <div class="menu-item">
+        <img src="image/cornflake.jpg" alt="Cornflake Popis" />
         <h3>Cornflake Popis</h3>
-        <p>Crushed cornflakes with chocolate + banana = perfect crunchy combo 🥜</p>
-        <span class="price">RM8.00</span>
-        <label class="cheese-option">
-          <input type="checkbox" onchange="toggleCheese(this)" data-price="8.00" /> Add Cheese (+RM1)
-        </label>
-        <button class="add-to-cart">Add to Cart</button>
+        <p>Crunchy cornflakes paired with soft popis base.</p>
+        <p class="price">RM8.00</p>
+        <button onclick="addToCart('Cornflake Popis', 8.00)">Add to Cart</button>
       </div>
 
-      
-      <div class="menu-item mixbox" onclick="openModal('modal4')">
-        <img src="image/MIX_BOX.jpg" alt="Mixbox" />
+      <div class="menu-item">
+        <img src="image/mixbox.jpg" alt="Mixbox" />
         <h3>Mixbox</h3>
-        <p>Get all 3 in 1 box – Oreo, Nestum, and Cornflake for ultimate satisfaction! ❤️</p>
-        <span class="price">RM10.00</span>
-        <label class="cheese-option">
-          <input type="checkbox" onchange="toggleCheese(this)" data-price="10.00" /> Add Cheese (+RM1)
-        </label>
-        <button class="add-to-cart">Add to Cart</button>
+        <p>Best of all – Choco, Milk, and Cornflake in one box!</p>
+        <p class="price">RM10.00</p>
+        <button onclick="addToCart('Mixbox', 10.00)">Add to Cart</button>
       </div>
-    </section>
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Popilicious. All rights reserved.</p>
-  </footer>
-
-  <!-- Modals -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('modal1')">&times;</span>
-      <h3>Choco Oreo Popis</h3>
-      <img src="image/OREO.jpg" alt="Choco" />
-      <p>Delicious banana popis coated with chocolate and crushed Oreo!</p>
-    </div>
-  </div>
-
-  <div id="modal2" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('modal2')">&times;</span>
-      <h3>Milk Nestum Popis</h3>
-      <img src="image/NESTUM.jpg" alt="Nestum" />
-      <p>Creamy, crunchy and so satisfying with every bite!</p>
-    </div>
-  </div>
-
-  <div id="modal3" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('modal3')">&times;</span>
-      <h3>Cornflake Popis</h3>
-      <img src="image/CORNFLAKES.jpg" alt="Cornflake" />
-      <p>That crispy cornflake crunch mixed with chocolate? Yum!</p>
-    </div>
-  </div>
-
-  <div id="modal4" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('modal4')">&times;</span>
-      <h3>Mixbox</h3>
-      <img src="image/MIX_BOX.jpg" alt="Mixbox" />
-      <p>Enjoy every flavor in one delightful box!</p>
-    </div>
-  </div>
+  <footer><p>&copy; 2025 Popilicious. All rights reserved.</p></footer>
 
   <script>
-    function openModal(id) {
-      document.getElementById(id).style.display = "block";
-    }
-
-    function closeModal(id) {
-      document.getElementById(id).style.display = "none";
-    }
-
-    function filterItems(category) {
-      const items = document.querySelectorAll(".menu-item");
-      const buttons = document.querySelectorAll(".filter-btn");
-      buttons.forEach(btn => btn.classList.remove("active"));
-      event.target.classList.add("active");
-      items.forEach(item => {
-        item.style.display = category === 'all' || item.classList.contains(category) ? 'block' : 'none';
-      });
-    }
-
-    function toggleCheese(checkbox) {
-      const priceElement = checkbox.closest(".menu-item").querySelector(".price");
-      const basePrice = parseFloat(checkbox.getAttribute("data-price"));
-      const newPrice = checkbox.checked ? basePrice + 1.00 : basePrice;
-      priceElement.textContent = "RM" + newPrice.toFixed(2);
+    function updateCartIcon() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const count = cart.length;
+      document.getElementById('cart-icon').setAttribute('data-count', count);
     }
 
     function addToCart(name, price) {
-      const cart = JSON.parse(localStorage.getItem('cart')) || [];
-      const existingItem = cart.find(item => item.name === name);
-      
-      if (existingItem) {
-        existingItem.quantity += 1;
-      } else {
-        cart.push({ name, quantity: 1, price });
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const found = cart.find(item => item.name === name);
+      if (found) {
+        showNotification(`${name} is already in your cart.`);
+        return;
       }
-
+      cart.push({ name, price, quantity: 1 });
       localStorage.setItem('cart', JSON.stringify(cart));
-      window.location.href = 'cart.html'; // Redirect to Cart page
+      updateCartIcon();
+      showNotification(`${name} added to cart successfully!`);
+    }
+
+    function showNotification(message) {
+      const notif = document.createElement('div');
+      notif.className = 'notif-popup';
+      notif.innerHTML = `
+        <strong>${message}</strong><br/><br/>
+        <button onclick="this.parentElement.remove()">Shop More</button>
+        <a href="cart.html"><button>Go to Cart</button></a>
+      `;
+      document.body.appendChild(notif);
+      setTimeout(() => {
+        if (notif.parentElement) notif.remove();
+      }, 5000);
     }
   </script>
 </body>
