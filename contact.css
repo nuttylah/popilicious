@@ -39,9 +39,13 @@ header h1 {
   font-size: 24px;
   color: #5C3A21;
 }
-
+body {
+            font-family: Arial, sans-serif;
+            background-color: #c2847a;
+            color: white;
+            text-align: center;
 h1 {
-            font-size: 3em;
+        font-size: 3em;
             margin: 20px 0;
         }
         .contact-info {
