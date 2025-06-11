@@ -2,7 +2,7 @@ document.getElementById("aboutBtn").addEventListener("click", function () {
   window.location.href = "about.html";
 });
 
-document.getElementById("menuBtn").addEventListener("click", function () {
+document.getElementById("menuBton").addEventListener("click", function () {
   window.location.href = "menu.html";
 });
 
