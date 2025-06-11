@@ -10,16 +10,19 @@ body {
 
 /* ====== HEADER STYLING (SYNCHRONIZED) ====== */
 header {
+  background-color: #d7ccc8;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
-  background-color: #fff8ec;
-  border-bottom: 2px solid #efd8b2;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Logo and Brand */
+header h1 {
+  font-size: 1.8rem;
+  color: #4E342E;
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -48,11 +51,10 @@ header {
   color: #5C3A21;
 }
 
-/* ====== NAVIGATION LINKS ====== */
 nav a {
   margin: 0 12px;
   text-decoration: none;
-  color: #5D4037;
+  color: #4E342E;
   font-weight: 600;
   font-size: 18px;
   transition: color 0.3s ease;
@@ -63,7 +65,6 @@ nav a.active {
   color: #3E2723;
   font-weight: 700;
 }
-
 /* ====== CART BADGE ====== */
 .cart-badge {
   background-color: #d2691e;
