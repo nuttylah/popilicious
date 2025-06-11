@@ -307,4 +307,14 @@ h2 {
   background: rgba(255,255,255,1);
 }
 
+h2 a {
+  color: inherit;         /* keeps the original heading color */
+  text-decoration: none;  /* removes underline */
+}
+
+h2 a:hover {
+  text-decoration: underline;
+  color: #8b4513;         /* optional: highlight color on hover */
+}
+
 
