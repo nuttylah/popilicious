@@ -7,9 +7,18 @@ footer {
 }
 
 /* ========== HEADER BRANDING ========== */
+header {
+  background-color: #d7ccc8;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
 header h1 {
   font-size: 1.8rem;
-  color: #4e342e;
+  color: #4E342E;
 }
 
 .logo {
@@ -39,6 +48,23 @@ header h1 {
   font-size: 24px;
   color: #5C3A21;
 }
+
+nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #4E342E;
+  font-weight: 600;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #3E2723;
+  font-weight: 700;
+}
+
+
 body {
             font-family: Arial, sans-serif;
             background-color: #c2847a;
