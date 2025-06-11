@@ -1,0 +1,57 @@
+/* ========== HEADER (SYNCHRONIZED WITH style.css) ========== */
+header {
+  background-color: #d7ccc8;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: #4E342E;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #5C3A21;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.brand-name {
+  font-family: 'Pacifico', cursive;
+  font-size: 24px;
+  color: #5C3A21;
+}
+
+nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #4E342E;
+  font-weight: 600;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #3E2723;
+  font-weight: 700;
+}
