@@ -7,7 +7,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const image = localStorage.getItem("userImage");
 
   if (name) {
-    document.getElementById("homeUserName").textContent = `Welcome, ${name}!`;
+    document.getElementById("homeUserName").textContent;
   }
 
   if (image) {
