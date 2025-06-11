@@ -124,22 +124,47 @@ nav a.active {
   text-align: center;
 }
 
+/* Styled circular logos */
 .info-item img {
-  width: 60px;
-  height: auto;
-  margin-bottom: 10px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #d7b5a5;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  background-color: #fff5ef;
+  padding: 6px;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
 }
 
+.info-item img:hover {
+  transform: scale(1.1);
+}
+
+/* Icon style */
 .info-item i {
   font-size: 32px;
   color: #5C3A21;
   margin-bottom: 10px;
 }
 
+/* Info text with cuter style */
 .info-text {
-  margin-top: 5px;
-  font-size: 1rem;
-  color: #444;
+  margin-top: 8px;
+  font-size: 1.05rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  color: #5C3A21;
+  background-color: #fceee5;
+  padding: 10px 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+.info-text:hover {
+  background-color: #f8e0d4;
 }
 
 /* ========== 4. FOOTER ========== */
