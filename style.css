@@ -68,6 +68,16 @@ header h1 {
   color: #5C3A21;
 }
 
+.cart-badge {
+  background-color: #d2691e;
+  color: #fff;
+  border-radius: 50%;
+  padding: 2px 8px;
+  font-size: 14px;
+  vertical-align: top;
+  margin-left: 4px;
+}
+
 /* Optional animation */
 @keyframes fadeIn {
   from {
@@ -218,100 +228,5 @@ h2 {
   text-align: left;
 }
 
-.story-photo {
-  width: 300px;
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
 
-.story-text {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #5D4037;
-  max-width: 550px;
-}
 
-.our-values {
-  max-width: 700px;
-  margin: 40px auto;
-  text-align: center;
-}
-
-.value-title {
-  font-weight: 700;
-  font-size: 22px;
-  margin-bottom: 8px;
-  color: #4E342E;
-}
-
-.value-description {
-  font-weight: 400;
-  font-size: 16px;
-  color: #5D4037;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* Team Section */
-
-.meet-the-team {
-  max-width: 900px;
-  margin: 0 auto 60px;
-  text-align: center;
-}
-.team-frame {
-  border: 2px solid #D7CCC8;
-  padding: 20px 15px;
-  border-radius: 12px;
-  background-color: #FFF;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-}
-
-.team-row.web-devs {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin: 20px 0 40px;
-}
-
-.team-member {
-  max-width: 180px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.team-member.single {
-  max-width: 300px;
-  margin: 0 auto 40px;
-}
-
-.team-member img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #6D4C41;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.team-member img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.team-title {
-  font-weight: 700;
-  color: #4E342E;
-  margin-top: 12px;
-  font-size: 16px;
-  text-transform: uppercase;
-}
-
-.team-name {
-  margin-top: 6px;
-  font-weight: 600;
-  font-size: 18px;
-  color: #5D4037;
-}
