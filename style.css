@@ -213,3 +213,35 @@ h2 {
     transform: translateY(0);
   }
 }
+
+/* ====== PROFILE ====== */
+.profile-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.profile-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: inline-block;
+  padding: 2rem;
+  margin-top: 1rem;
+}
+
+.profile-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.profile-card input[type="file"],
+.profile-card input[type="text"],
+.profile-card button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  font-size: 1rem;
+}
