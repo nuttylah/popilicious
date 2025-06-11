@@ -8,6 +8,10 @@ document.getElementById("menuBtn").addEventListener("click", function () {
   window.location.href = "menu.html";
 });
 
+document.getElementById("contactBtn").addEventListener("click", function () {
+  window.location.href = "contact.html";
+});
+
 /* ====== PROFILE ====== */
 window.addEventListener("DOMContentLoaded", () => {
   const name = localStorage.getItem("userName");
