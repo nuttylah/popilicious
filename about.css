@@ -1,12 +1,36 @@
- main {
-  background-color: rgba(255, 255, 255, 0.92);
-  padding: 40px 20px;
-  border-radius: 12px;
-  margin: 30px auto;
-  max-width: 1200px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+/* ============================================================
+   🧁 POPILICIOUS MAIN STYLESHEET
+   Organized for clarity, consistency, and maintenance
+============================================================ */
+
+/* ========== 1. ROOT + GLOBAL ELEMENTS ========== */
+:root {
+  --chocolate: #5C3A21;
+  --soft-beige: #FFF8F2;
+  --deep-brown: #4E342E;
+  --muted-brown: #8D6E63;
 }
 
+body {
+  font-family: 'Quicksand', sans-serif;
+  color: var(--deep-brown);
+  background-color: var(--soft-beige);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #D7CCC8;
+  padding-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+/* ========== 2. HEADER + NAVIGATION (SYNCHRONIZED WITH style.css) ========== */
 header {
   background-color: #d7ccc8;
   padding: 1rem 2rem;
@@ -18,9 +42,9 @@ header {
 
 header h1 {
   font-size: 1.8rem;
-  color: #4e342e;
+  color: #4E342E;
 }
-/* Logo container */
+
 .logo {
   display: flex;
   align-items: center;
@@ -29,23 +53,53 @@ header h1 {
   animation: fadeIn 1s ease-in-out;
 }
 
-/* Logo image */
 .logo-img {
-  width: 40px;          /* Small and precise */
+  width: 40px;
   height: 40px;
-  border-radius: 50%;   /* Circle */
-  object-fit: cover;    /* Crop to fit frame */
+  border-radius: 50%;
+  object-fit: cover;
   border: 2px solid #5C3A21;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
 }
 
 .logo-img:hover {
-  transform: scale(1.1) rotate(5deg); /* Cute hover effect */
+  transform: scale(1.1) rotate(5deg);
 }
 
+.brand-name {
+  font-family: 'Pacifico', cursive;
+  font-size: 24px;
+  color: #5C3A21;
+}
+
+nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #4E342E;
+  font-weight: 600;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #3E2723;
+  font-weight: 700;
+}
+/* ========== 3. MAIN CONTENT WRAPPER ========== */
+main {
+  background-color: rgba(255, 255, 255, 0.92);
+  padding: 40px 20px;
+  border-radius: 12px;
+  margin: 30px auto;
+  max-width: 1200px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+}
+
+/* ========== 4. BUTTONS ========== */
 .btn {
-  background-color: #8e44ad;
+  background-color: var(--chocolate);
   color: white;
   border: none;
   padding: 12px 24px;
@@ -57,63 +111,57 @@ header h1 {
 }
 
 .btn:hover {
-  background-color: #732d91;
+  background-color: #3E2723;
 }
 
-/* Brand name */
-.brand-name {
-  font-family: 'Pacifico', cursive;
-  font-size: 24px;
-  color: #5C3A21;
+.add-to-cart {
+  width: 100%;
 }
 
-/* Optional animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.popup-buttons button {
+  margin: 5px;
+  padding: 8px 16px;
+  background-color: #d2691e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-nav a {
-  margin: 0 12px;
-  text-decoration: none;
-  color: #5D4037;
-  font-weight: 600;
-  font-size: 18px;
-  transition: color 0.3s ease; /* Added smooth color transition */
+/* ========== 5. CART BADGE + POPUP NOTIFICATION ========== */
+.cart-badge {
+  background-color: #d2691e;
+  color: #fff;
+  border-radius: 50%;
+  padding: 2px 8px;
+  font-size: 14px;
+  vertical-align: top;
+  margin-left: 4px;
 }
 
-nav a:hover,
-nav a.active {
-  color: #3E2723;
-  font-weight: 700;
-}
-
-/* ==== COLOR PALETTE ==== 
-Chocolate Brown: #5C3A21 
-Soft Beige: #FFF8F2 
-Deep Brown: #4E342E 
-Muted Brown: #8D6E63 
-*/
-
-/* === Base Styles === */
-body {
+.popup {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff8f0;
+  border: 2px solid #d2691e;
+  padding: 20px;
+  z-index: 999;
+  text-align: center;
+  border-radius: 10px;
   font-family: 'Quicksand', sans-serif;
-  color: #4E342E;
-  background-color: #FFF8F2;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
 }
 
+.popup-buttons {
+  margin-top: 10px;
+}
 
-
-/* === Story Section === */
+/* ========== 6. STORY SECTION ========== */
 .story-flex {
   display: flex;
   flex-wrap: wrap;
@@ -139,7 +187,7 @@ body {
   border: 3px solid #E6D3C5;
 }
 
-/* === Values & Info === */
+/* ========== 7. VALUES + INFO SECTION ========== */
 .our-values,
 .extra-info {
   margin: 40px auto;
@@ -152,7 +200,7 @@ body {
   font-weight: bold;
   text-align: center;
   font-size: 1.1em;
-  color: #4E342E;
+  color: var(--deep-brown);
   margin-bottom: 10px;
 }
 
@@ -168,7 +216,7 @@ body {
   border: 1px solid #f5e1d3;
 }
 
-/* === Team Section === */
+/* ========== 8. MEET THE TEAM ========== */
 .meet-the-team {
   text-align: center;
   padding: 40px 20px;
@@ -206,7 +254,7 @@ body {
 .team-title {
   font-weight: bold;
   text-transform: uppercase;
-  color: #5C3A21;
+  color: var(--chocolate);
   margin-top: 12px;
   font-size: 14px;
 }
@@ -215,16 +263,15 @@ body {
   font-family: 'Pacifico', cursive;
   font-size: 18px;
   margin-top: 5px;
-  color: #8D6E63;
+  color: var(--muted-brown);
 }
 
-/* Fix oversized image */
 .team-frame img[alt="Cooking Team"] {
   height: 230px;
   object-fit: cover;
 }
 
-/* === Gallery Section === */
+/* ========== 9. GALLERY SECTION ========== */
 .food-gallery {
   background-color: #FFF5EC;
   padding: 60px 20px;
@@ -233,7 +280,7 @@ body {
 
 .food-gallery h2 {
   font-size: 2em;
-  color: #5C3A21;
+  color: var(--chocolate);
   margin-bottom: 10px;
 }
 
@@ -268,33 +315,28 @@ body {
   color: #5D4037;
 }
 
-/* === Buttons (if needed) === */
-.btn {
-  background-color: #5C3A21;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  font-size: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-top: 15px;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #3E2723;
-}
-
-/* === Footer === */
+/* ========== 10. FOOTER ========== */
 footer {
   text-align: center;
   padding: 20px;
   background-color: #EDE0D4;
   font-size: 0.9em;
-  color: #4E342E;
+  color: var(--deep-brown);
 }
 
-/* === Responsive Adjustments === */
+/* ========== 11. ANIMATIONS ========== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== 12. RESPONSIVE DESIGN ========== */
 @media (max-width: 768px) {
   .story-flex {
     flex-direction: column;
@@ -331,62 +373,4 @@ footer {
     width: 36px;
     height: 36px;
   }
-}
-.add-to-cart {
-    width: 100%;
-  }
-}
-
-.cart-badge {
-  background-color: #d2691e;
-  color: #fff;
-  border-radius: 50%;
-  padding: 2px 8px;
-  font-size: 14px;
-  vertical-align: top;
-  margin-left: 4px;
-}
-
-/* === Animation === */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.popup {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  position: fixed;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff8f0;
-  border: 2px solid #d2691e;
-  padding: 20px;
-  z-index: 999;
-  text-align: center;
-  border-radius: 10px;
-  font-family: 'Quicksand', sans-serif;
-}
-
-.popup-buttons {
-  margin-top: 10px;
-}
-
-.popup-buttons button {
-  margin: 5px;
-  padding: 8px 16px;
-  background-color: #d2691e;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
 }
