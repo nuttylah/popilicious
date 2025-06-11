@@ -44,9 +44,4 @@ function nextSlide() {
 // Change slide every 3 seconds
 setInterval(nextSlide, 3000);
 
-/* ====== BUTTON SLIDER  ====== */
-function changeSlide(step) {
-  currentSlide = (currentSlide + step + slides.length) % slides.length;
-  showSlide(currentSlide);
-}
 
