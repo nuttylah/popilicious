@@ -2,6 +2,10 @@ document.getElementById("aboutBtn").addEventListener("click", function () {
   window.location.href = "about.html";
 });
 
+document.getElementById("menuBtn").addEventListener("click", function () {
+  window.location.href = "menu.html";
+});
+
 window.addEventListener("DOMContentLoaded", () => {
   const name = localStorage.getItem("userName");
   const image = localStorage.getItem("userImage");
