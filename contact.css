@@ -1,24 +1,11 @@
-/* ========== FOOTER ========== */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #a9745c;
-  color: #fffaf2;
-}
-
-/* ========== HEADER BRANDING (SYNCHRONIZED) ========== */
+/* ========== 1. HEADER BRANDING ========== */
 header {
   background-color: #d7ccc8;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-header h1 {
-  font-size: 1.8rem;
-  color: #4E342E;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -65,18 +52,61 @@ nav a.active {
 }
 
 
-body {
-            font-family: Arial, sans-serif;
-            background-color: #c2847a;
-            color: white;
-            text-align: center;
-header h2 {
+/* ========== 2. CONTACT PAGE TITLE ========== */
+.contact-header {
+  background-color: #fff8f0;
+  padding: 30px 10px;
+  border: 3px dashed #efd3c5;
+  margin: 20px auto;
+  max-width: 700px;
   text-align: center;
-  padding: 20px 0;
-  font-size: 2rem;
-  color: #333;
+  border-radius: 15px;
+  position: relative;
 }
 
+.contact-header h2 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.2rem;
+  color: #5C3A21;
+  position: relative;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.contact-header h2::before {
+  content: "📞";
+  margin-right: 10px;
+  font-size: 1.8rem;
+  vertical-align: middle;
+}
+
+.contact-header h2::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 4px;
+  background: #f0b8a1;
+  margin: 10px auto 0;
+  border-radius: 2px;
+  animation: underlineSlide 2s ease-in-out infinite;
+}
+
+@keyframes underlineSlide {
+  0% {
+    width: 0;
+    background-color: #f0b8a1;
+  }
+  50% {
+    width: 60%;
+    background-color: #e0a388;
+  }
+  100% {
+    width: 0;
+    background-color: #f0b8a1;
+  }
+}
+
+/* ========== 3. CONTACT INFO SECTION ========== */
 .contact-info {
   display: flex;
   justify-content: center;
@@ -100,7 +130,7 @@ header h2 {
   margin-bottom: 10px;
 }
 
-  .info-item i {
+.info-item i {
   font-size: 32px;
   color: #5C3A21;
   margin-bottom: 10px;
@@ -112,9 +142,22 @@ header h2 {
   color: #444;
 }
 
-/* ========== RESPONSIVE ========== */
+/* ========== 4. FOOTER ========== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #a9745c;
+  color: #fffaf2;
+}
+
+/* ========== 5. RESPONSIVE ========== */
 @media (max-width: 768px) {
-  .menu-grid {
-    grid-template-columns: 1fr;
-    padding: 10px;
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
   }
+
+  .contact-header h2 {
+    font-size: 1.8rem;
+  }
+}
