@@ -6,52 +6,68 @@
   <title>Contact Us</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="contact.css" />
-   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Pacifico&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Pacifico&display=swap" rel="stylesheet" />
 </head>
 <body>
-     <header>
+  <header>
     <div class="logo">
       <img src="image/LOGO_POPIS.jpg" alt="Popilicious Logo" class="logo-img" />
       <span class="brand-name">Popilicious</span>
     </div>
     <nav>
       <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
+      <a href="about.html">About</a>
       <a href="menu.html">Menu</a>
       <a href="cart.html">
         Cart <span id="cart-count" class="cart-badge">0</span>
       </a>
       <a href="profile.html">Profile</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="active">Contact</a>
     </nav>
   </header>
 
-  <header>
-    <h2>CONTACT US</h2>
-</header>
-<div class="contact-info">
-    <div class="info-item">
+  <main>
+    <section class="contact-header">
+      <h2>CONTACT US</h2>
+    </section>
+
+    <div class="contact-info">
+      <div class="info-item">
         <img src="image/Phonee.jpg" alt="Phone Logo" class="phone-img" />
-        <i class="fas fa-phone"></i> <!-- FontAwesome icon -->
+        <i class="fas fa-phone"></i>
         <div class="info-text">Tel: +60 11-1062 6879 (Aleya)</div>
-    </div>
-    <div class="info-item">
+      </div>
+      <div class="info-item">
         <img src="image/igs.jpg" alt="Ig Logo" class="ig-img" />
-        <i class="fab fa-instagram"></i> <!-- FontAwesome icon -->
+        <i class="fab fa-instagram"></i>
         <div class="info-text">@crunchpopilicious</div>
-    </div>
-    <div class="info-item">
+      </div>
+      <div class="info-item">
         <img src="image/location.jpg" alt="Location Logo" class="location-img" />
-        <i class="fas fa-map-marker-alt"></i> <!-- FontAwesome icon -->
-        <div class="info-text">Mahallah Halimatust Saadiah,<br> International Islamic University Malaysia,<br> Jln Gombak, 53100 Kuala Lumpur, Selangor</div>
+        <i class="fas fa-map-marker-alt"></i>
+        <div class="info-text">
+          Mahallah Halimatust Saadiah,<br />
+          International Islamic University Malaysia,<br />
+          Jln Gombak, 53100 Kuala Lumpur, Selangor
+        </div>
+      </div>
     </div>
-</div>
+  </main>
 
   <footer>
-  <p>&copy; 2025 Popilicious. All rights reserved.</p>
-</footer>
-    </p>
-  </div>
+    <p>&copy; 2025 Popilicious. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const count = cart.reduce((total, item) => total + item.quantity, 0);
+      const cartCountEl = document.getElementById('cart-count');
+      if (cartCountEl) {
+        cartCountEl.textContent = count;
+      }
+    }
+    document.addEventListener('DOMContentLoaded', updateCartCount);
+  </script>
 </body>
 </html>
-
