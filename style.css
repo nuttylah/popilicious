@@ -6,14 +6,6 @@ main {
   max-width: 1200px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.04);
 }
-main {
-  background-color: rgba(255, 255, 255, 0.92);
-  padding: 40px 20px;
-  border-radius: 12px;
-  margin: 30px auto;
-  max-width: 1200px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
-}
 
 header {
   background-color: #d7ccc8;
@@ -187,11 +179,6 @@ header {
   border-bottom: 2px solid #D7CCC8;
 }
 
-header h1 {
-  margin: 0;
-  font-weight: 700;
-}
-
 nav a {
   margin: 0 12px;
   text-decoration: none;
@@ -274,7 +261,6 @@ h2 {
   margin: 0 auto 60px;
   text-align: center;
 }
-
 .team-frame {
   border: 2px solid #D7CCC8;
   padding: 20px 15px;
