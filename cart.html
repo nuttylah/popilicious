@@ -110,10 +110,10 @@
     cartItems.innerHTML = '';
     let total = 0;
 
-    cart.forEach((item, index) => {
-      const itemTotal = item.quantity * item.price;
-      total += itemTotal;
-      const imageSrc = imageMap[item.name] || 'image/POPIS.jpg';
+  cart.forEach((item, index) => {
+  const itemTotal = item.quantity * item.price;
+  total += itemTotal;
+  const imageSrc = imageMap[item.name] || 'image/POPIS.jpg';
 
       cartItems.innerHTML += `
         <tr>
@@ -130,6 +130,7 @@
               <button onclick="changeQuantity(${index}, 1)">+</button>
             </div>
           </td>
+          <td>RM${item.price.toFixed(2)}</td> <!-- Unit Price -->
           <td>RM${itemTotal.toFixed(2)}</td>
         </tr>
       `;
