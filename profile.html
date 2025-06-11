@@ -25,44 +25,7 @@
       <a href="contact.html">Contact</a>
     </nav>
   </header>
-  <div class="profile-card">
-    <img src="https://via.placeholder.com/120" alt="Profile Picture" class="profile-img" id="profileImg">
-    
-    <h2 id="profileName">Jane Doe</h2>
-    <p id="profileBio">Frontend Developer from Earth 🌍</p>
 
-    <!-- Editable Fields -->
-    <input type="text" id="nameInput" />
-    <textarea id="bioInput" rows="3"></textarea>
-
-    <button class="edit-btn" onclick="enableEdit()">Edit Profile</button>
-    <button class="save-btn" onclick="saveProfile()" style="display:none">Save</button>
-  </div>
-
-  <script>
-    function enableEdit() {
-      document.getElementById('nameInput').style.display = 'block';
-      document.getElementById('bioInput').style.display = 'block';
-      document.getElementById('nameInput').value = document.getElementById('profileName').innerText;
-      document.getElementById('bioInput').value = document.getElementById('profileBio').innerText;
-
-      document.querySelector('.edit-btn').style.display = 'none';
-      document.querySelector('.save-btn').style.display = 'inline-block';
-    }
-
-    function saveProfile() {
-      const newName = document.getElementById('nameInput').value;
-      const newBio = document.getElementById('bioInput').value;
-
-      document.getElementById('profileName').innerText = newName;
-      document.getElementById('profileBio').innerText = newBio;
-
-      document.getElementById('nameInput').style.display = 'none';
-      document.getElementById('bioInput').style.display = 'none';
-      document.querySelector('.edit-btn').style.display = 'inline-block';
-      document.querySelector('.save-btn').style.display = 'none';
-    }
-  </script>
 </body>
 </html>
 
