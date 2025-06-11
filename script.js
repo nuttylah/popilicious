@@ -1,3 +1,5 @@
+
+/* ====== HOMEPAGE BUTTON ====== */
 document.getElementById("aboutBtn").addEventListener("click", function () {
   window.location.href = "about.html";
 });
@@ -6,6 +8,7 @@ document.getElementById("menuBtn").addEventListener("click", function () {
   window.location.href = "menu.html";
 });
 
+/* ====== PROFILE ====== */
 window.addEventListener("DOMContentLoaded", () => {
   const name = localStorage.getItem("userName");
   const image = localStorage.getItem("userImage");
@@ -19,6 +22,8 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+
+/* ====== SLIDER ====== */
 let currentSlide = 0;
 const slides = document.querySelectorAll(".slide");
 
@@ -38,3 +43,10 @@ function nextSlide() {
 
 // Change slide every 3 seconds
 setInterval(nextSlide, 3000);
+
+/* ====== BUTTON SLIDER  ====== */
+function changeSlide(step) {
+  currentSlide = (currentSlide + step + slides.length) % slides.length;
+  showSlide(currentSlide);
+}
+
