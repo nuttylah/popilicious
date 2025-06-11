@@ -40,3 +40,24 @@ header h1 {
   color: #5C3A21;
 }
 
+h1 {
+            font-size: 3em;
+            margin: 20px 0;
+        }
+        .contact-info {
+            margin: 40px 0;
+        }
+        .info-item {
+            margin: 20px;
+            display: inline-block;
+            text-align: center;
+        }
+        .info-item i {
+            font-size: 60px; /* Adjust icon size */
+            color: white;
+            display: block;
+        }
+        .info-text {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
