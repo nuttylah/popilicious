@@ -49,19 +49,3 @@ function changeSlide(step) {
   showSlide(currentSlide);
 }
 
-/* ====== LOCATION ====== */
-function initMap() {
-  const popiliciousLocation = { lat: 3.2464791, lng: 101.7328314 }; // IIUM Gombak coordinates
-
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 15,
-    center: popiliciousLocation,
-  });
-
-  const marker = new google.maps.Marker({
-    position: popiliciousLocation,
-    map: map,
-    title: "Popilicious @ IIUM Gombak",
-  });
-}
-
