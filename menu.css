@@ -149,25 +149,26 @@ footer {
   color: #fffaf2;
 }
 
-/* ========== HEADER BRANDING ========== */
-header h1 {
-  font-size: 1.8rem;
-  color: #4e342e;
+/* ========== HEADER BRANDING (SYNCHRONIZED WITH ABOUT PAGE) ========== */
+header {
+  background-color: #fffaf2;
+  border-bottom: 2px solid #efd8b2;
+  padding: 20px 0;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px;
+  justify-content: center;
+  gap: 12px;
   animation: fadeIn 1s ease-in-out;
 }
 
 .logo-img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  width: 50px;
+  height: 50px;
   object-fit: cover;
+  border-radius: 50%;
   border: 2px solid #5C3A21;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
@@ -179,10 +180,10 @@ header h1 {
 
 .brand-name {
   font-family: 'Pacifico', cursive;
-  font-size: 24px;
+  font-size: 28px;
   color: #5C3A21;
+  margin: 0;
 }
-
 /* ========== BUTTON GENERAL ========== */
 .btn {
   background-color: #8e44ad;
@@ -227,8 +228,6 @@ header h1 {
   .modal-content {
     width: 90%;
   }
-
-
 
   .add-to-cart {
     width: 100%;
