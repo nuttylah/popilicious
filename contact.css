@@ -73,3 +73,9 @@ h2 {
   display: block;
   margin: 0 auto;
 }
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
