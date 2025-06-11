@@ -6,14 +6,6 @@
   max-width: 1200px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.04);
 }
-main {
-  background-color: rgba(255, 255, 255, 0.92);
-  padding: 40px 20px;
-  border-radius: 12px;
-  margin: 30px auto;
-  max-width: 1200px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
-}
 
 header {
   background-color: #d7ccc8;
@@ -23,7 +15,6 @@ header {
   align-items: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-
 
 header h1 {
   font-size: 1.8rem;
@@ -86,6 +77,21 @@ header h1 {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #5D4037;
+  font-weight: 600;
+  font-size: 18px;
+  transition: color 0.3s ease; /* Added smooth color transition */
+}
+
+nav a:hover,
+nav a.active {
+  color: #3E2723;
+  font-weight: 700;
 }
 
 /* ==== COLOR PALETTE ==== 
