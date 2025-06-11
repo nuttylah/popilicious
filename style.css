@@ -245,3 +245,11 @@ h2 {
   padding: 10px;
   font-size: 1rem;
 }
+
+/* ====== HOMEPAGE ====== */
+.small-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
