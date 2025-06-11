@@ -26,6 +26,57 @@
     </nav>
   </header>
 
+<main class="profile-container">
+  <h2>User Profile</h2>
+  <div class="profile-card">
+    <img id="profileImage" src="image/default-avatar.png" alt="Profile Picture" />
+    <input type="file" id="imageUpload" accept="image/*" />
+
+    <h3 id="displayName">Your Name</h3>
+    <input type="text" id="nameInput" placeholder="Enter your name" />
+
+    <button id="saveBtn">Save Profile</button>
+  </div>
+</main>
+
+  <script>
+  // Load profile data
+  window.addEventListener("DOMContentLoaded", () => {
+    const name = localStorage.getItem("userName");
+    const image = localStorage.getItem("userImage");
+
+    if (name) {
+      document.getElementById("displayName").textContent = name;
+      document.getElementById("nameInput").value = name;
+    }
+
+    if (image) {
+      document.getElementById("profileImage").src = image;
+    }
+  });
+
+  // Save profile data
+  document.getElementById("saveBtn").addEventListener("click", () => {
+    const name = document.getElementById("nameInput").value;
+    const image = document.getElementById("profileImage").src;
+
+    localStorage.setItem("userName", name);
+    localStorage.setItem("userImage", image);
+
+    document.getElementById("displayName").textContent = name;
+    alert("Profile saved!");
+  });
+
+  // Preview profile image
+  document.getElementById("imageUpload").addEventListener("change", function () {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      document.getElementById("profileImage").src = e.target.result;
+    };
+    reader.readAsDataURL(this.files[0]);
+  });
+</script>
+  
 </body>
 </html>
 
