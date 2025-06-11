@@ -1,48 +1,45 @@
 /* cart.css */
 
-/* General Styles */
-body {
-  font-family: 'Quicksand', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
+/* ========== FOOTER ========== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #a9745c;
+  color: #fffaf2;
 }
 
-header {
-  background-color: #fff;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+/* ========== HEADER BRANDING ========== */
+header h1 {
+  font-size: 1.8rem;
+  color: #4e342e;
 }
 
 .logo {
   display: flex;
   align-items: center;
+  gap: 8px;
+  padding: 10px;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .logo-img {
-  width: 50px;
-  height: auto;
-  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #5C3A21;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.1) rotate(5deg);
 }
 
 .brand-name {
+  font-family: 'Pacifico', cursive;
   font-size: 24px;
-  font-weight: 700;
-  color: #333;
-}
-
-nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-}
-
-nav a:hover {
-  color: #007BFF;
+  color: #5C3A21;
 }
 
 /* Cart Summary Styles */
