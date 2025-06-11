@@ -1,4 +1,17 @@
-/* Logo container */
+/* ========== FOOTER ========== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #a9745c;
+  color: #fffaf2;
+}
+
+/* ========== HEADER BRANDING ========== */
+header h1 {
+  font-size: 1.8rem;
+  color: #4e342e;
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -7,40 +20,23 @@
   animation: fadeIn 1s ease-in-out;
 }
 
-/* Logo image */
 .logo-img {
-  width: 40px;          /* Small and precise */
+  width: 40px;
   height: 40px;
-  border-radius: 50%;   /* Circle */
-  object-fit: cover;    /* Crop to fit frame */
+  border-radius: 50%;
+  object-fit: cover;
   border: 2px solid #5C3A21;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
 }
 
 .logo-img:hover {
-  transform: scale(1.1) rotate(5deg); /* Cute hover effect */
+  transform: scale(1.1) rotate(5deg);
 }
 
-.btn {
-  background-color: #8e44ad;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  font-size: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-top: 15px;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #732d91;
-}
-
-/* Brand name */
 .brand-name {
   font-family: 'Pacifico', cursive;
   font-size: 24px;
   color: #5C3A21;
 }
+
