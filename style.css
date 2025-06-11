@@ -1,3 +1,94 @@
+/* ====== BASE STYLES ====== */
+body {
+  font-family: 'Quicksand', sans-serif;
+  color: #5D4037; /* chocolate color */
+  background-color: #F5F1ED; /* nude */
+  text-align: center;
+  margin: 0;
+  padding: 0 20px;
+}
+
+/* ====== HEADER STYLING (SYNCHRONIZED) ====== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #fff8ec;
+  border-bottom: 2px solid #efd8b2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo and Brand */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #5C3A21;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.brand-name {
+  font-family: 'Pacifico', cursive;
+  font-size: 24px;
+  color: #5C3A21;
+}
+
+/* ====== NAVIGATION LINKS ====== */
+nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #5D4037;
+  font-weight: 600;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #3E2723;
+  font-weight: 700;
+}
+
+/* ====== CART BADGE ====== */
+.cart-badge {
+  background-color: #d2691e;
+  color: #fff;
+  border-radius: 50%;
+  padding: 2px 8px;
+  font-size: 14px;
+  vertical-align: top;
+  margin-left: 4px;
+}
+
+/* ====== HERO SECTION ====== */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #efebe9;
+  color: #3e2723;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ====== MAIN CONTENT ====== */
 main {
   background-color: rgba(255, 255, 255, 0.92);
   padding: 40px 20px;
@@ -7,44 +98,7 @@ main {
   box-shadow: 0 4px 15px rgba(0,0,0,0.04);
 }
 
-header {
-  background-color: #d7ccc8;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-
-header h1 {
-  font-size: 1.8rem;
-  color: #4e342e;
-}
-/* Logo container */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px;
-  animation: fadeIn 1s ease-in-out;
-}
-
-/* Logo image */
-.logo-img {
-  width: 40px;          /* Small and precise */
-  height: 40px;
-  border-radius: 50%;   /* Circle */
-  object-fit: cover;    /* Crop to fit frame */
-  border: 2px solid #5C3A21;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
-}
-
-.logo-img:hover {
-  transform: scale(1.1) rotate(5deg); /* Cute hover effect */
-}
-
+/* ====== BUTTON STYLING ====== */
 .btn {
   background-color: #8e44ad;
   color: white;
@@ -61,64 +115,7 @@ header h1 {
   background-color: #732d91;
 }
 
-/* Brand name */
-.brand-name {
-  font-family: 'Pacifico', cursive;
-  font-size: 24px;
-  color: #5C3A21;
-}
-
-.cart-badge {
-  background-color: #d2691e;
-  color: #fff;
-  border-radius: 50%;
-  padding: 2px 8px;
-  font-size: 14px;
-  vertical-align: top;
-  margin-left: 4px;
-}
-
-/* Optional animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-nav a {
-  margin-left: 1rem;
-  text-decoration: none;
-  color: #4e342e;
-  font-weight: 600;
-}
-
-nav a:hover {
-  color: #8d6e63;
-}
-
-.hero {
-  text-align: center;
-  padding: 4rem 2rem;
-  background-color: #efebe9;
-  color: #3e2723;
-}
-
-.hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #d7ccc8;
-  font-size: 0.9rem;
-  color: #4e342e;
-}
+/* ====== MENU SECTION ====== */
 .menu {
   padding: 2rem;
   background-color: #fff8f0;
@@ -174,41 +171,17 @@ footer {
 .menu-item button:hover {
   background-color: #5c2e00;
 }
-body {
-  font-family: 'Quicksand', sans-serif;
-  color: #5D4037; /* chocolate color */
-  background-color: #F5F1ED; /* nude */
+
+/* ====== FOOTER ====== */
+footer {
   text-align: center;
-  margin: 0;
-  padding: 0 20px;
+  padding: 1rem;
+  background-color: #d7ccc8;
+  font-size: 0.9rem;
+  color: #4e342e;
 }
 
-header {
-  background: #fff;
-  padding: 20px 0;
-  border-bottom: 2px solid #D7CCC8;
-}
-
-nav a {
-  margin: 0 12px;
-  text-decoration: none;
-  color: #5D4037;
-  font-weight: 600;
-  font-size: 18px;
-  transition: color 0.3s ease; /* Added smooth color transition */
-}
-
-nav a:hover,
-nav a.active {
-  color: #3E2723;
-  font-weight: 700;
-}
-
-main {
-  max-width: 900px;
-  margin: 30px auto;
-}
-
+/* ====== ABOUT US STYLING ====== */
 h2 {
   font-weight: 700;
   margin-bottom: 20px;
@@ -228,5 +201,14 @@ h2 {
   text-align: left;
 }
 
-
-
+/* ====== ANIMATIONS ====== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
